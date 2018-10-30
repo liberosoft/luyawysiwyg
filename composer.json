@@ -1,0 +1,19 @@
+{
+    "name": "liberosoft/luyawysiwyg",
+    "description": "Wysiwyg editor",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "andrzej",
+            "email": "andrzej@liberosoft.pl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+        "psr-4" : {
+            "liberosoft\\luyawysiwyg\\" : "src/"
+        }
+    }
+}
