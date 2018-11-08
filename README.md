@@ -22,7 +22,7 @@ return [
         'wysiwygadmin' => [
             'class' => 'liberosoft\luyawysiwyg\admin\Module',
             'aliases' => [
-                '@wysiwyg_resource' => '@app/modules/luyawysiwyg/src/admin'
+                '@wysiwyg_resource' => '@app/vendor/liberosoft/luyawysiwyg/src/admin'
             ],
             'useAppViewPath' => true,
         ],
