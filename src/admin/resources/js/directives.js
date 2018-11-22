@@ -1,21 +1,4 @@
-var myAppModule = angular.module('myApp', ['ui.tinymce']);
-//
-// myAppModule.controller('TinyMceController', function($scope) {
-//     $scope.tinymceModel = 'Initial content';
-//
-//     $scope.getContent = function() {
-//         console.log('Editor content:', $scope.tinymceModel);
-//     };
-//
-//     $scope.setContent = function() {
-//         $scope.tinymceModel = 'Time: ' + (new Date());
-//     };
-//
-//     $scope.tinymceOptions = {
-//         plugins: 'link image code',
-//         toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
-//     };
-// });
+angular.module("zaa").requires.push('ui.tinymce');
 
 zaa.directive("wysiwyg2", function () {
     return {
@@ -29,7 +12,13 @@ zaa.directive("wysiwyg2", function () {
             "placeholder": "@placeholder"
         },
         template: function () {
-            return "<div><textarea ui-tinymce ng-model='model' class='form-control'></textarea></div>";
+            return "<div><textarea ui-tinymce=\"tinymceOptions\" ng-model=\"model\"></textarea></div>";
         },
+        controller: ['$scope', '$element', '$timeout', function ($scope, $element, $timeout) {
+            $scope.tinymceOptions = {
+                plugins: 'link image code',
+                toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+            };
+        }],
     }
 });

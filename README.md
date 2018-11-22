@@ -5,7 +5,6 @@ Wysiwyg Module for luya CMS. Tinymce suppport.
 ## Installation
 
 ```shell
-bower install angular-ui-tinymce --save
 composer require liberosoft/luyawysiwyg
 ```
 
@@ -17,14 +16,11 @@ return [
         // ...
         'wysiwygfrontend' => [
             'class' => 'liberosoft\luyawysiwyg\frontend\Module',
-            'useAppViewPath' => true,
+            'useAppViewPath' => false,
         ],
         'wysiwygadmin' => [
             'class' => 'liberosoft\luyawysiwyg\admin\Module',
-            'aliases' => [
-                '@wysiwyg_resource' => '@app/vendor/liberosoft/luyawysiwyg/src/admin'
-            ],
-            'useAppViewPath' => true,
+            'useAppViewPath' => false,
         ],
         // ...
     ],

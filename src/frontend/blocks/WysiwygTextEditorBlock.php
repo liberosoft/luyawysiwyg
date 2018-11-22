@@ -4,7 +4,6 @@ namespace liberosoft\luyawysiwyg\frontend\blocks;
 
 use luya\cms\base\PhpBlock;
 use luya\cms\frontend\blockgroups\ProjectGroup;
-use luya\cms\helpers\BlockHelper;
 
 /**
  * Wysiwyg Text Editor Block.
@@ -39,7 +38,7 @@ class WysiwygTextEditorBlock extends PhpBlock
      */
     public function icon()
     {
-        return 'extension'; // see the list of icons on: https://design.google.com/icons/
+        return 'text_format'; // see the list of icons on: https://design.google.com/icons/
     }
  
     /**

@@ -1,7 +1,7 @@
 {
     "name": "liberosoft/luyawysiwyg",
     "description": "Wysiwyg editor",
-    "type": "library",
+    "type": "luya-module",
     "license": "MIT",
     "authors": [
         {
@@ -9,8 +9,9 @@
             "email": "andrzej@liberosoft.pl"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "bower-asset/angular-ui-tinymce" : "~0.0.18"
+    },
     "autoload" : {
         "psr-4" : {
             "liberosoft\\luyawysiwyg\\" : "src/"

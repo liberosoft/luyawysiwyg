@@ -4,12 +4,13 @@ namespace liberosoft\luyawysiwyg\admin\assets;
 
 class WysiwygAssets extends \luya\web\Asset
 {
-    public $sourcePath = '@wysiwyg_resource/resources';
+    public $sourcePath = '@wysiwygadmin/resources';
 
     public $css = [];
 
     public $js = [
         'js/directives.js',
+        'js/pl.js'
     ];
 
     public $depends = [
