@@ -8,7 +8,7 @@ use luya\cms\frontend\blockgroups\ProjectGroup;
 /**
  * Wysiwyg Text Editor Block.
  *
- * File has been created with `block/create` command. 
+ * File has been created with `block/create` command.
  */
 class WysiwygTextEditorBlock extends PhpBlock
 {
@@ -20,46 +20,41 @@ class WysiwygTextEditorBlock extends PhpBlock
     /**
      * @inheritDoc
      */
-    public function blockGroup()
-    {
+    public function blockGroup() {
         return ProjectGroup::class;
     }
 
     /**
      * @inheritDoc
      */
-    public function name()
-    {
-        return 'Word like editor';
+    public function name() {
+        return 'Edytor tekstu';
     }
-    
+
     /**
      * @inheritDoc
      */
-    public function icon()
-    {
+    public function icon() {
         return 'text_format'; // see the list of icons on: https://design.google.com/icons/
     }
- 
+
     /**
      * @inheritDoc
      */
-    public function config()
-    {
+    public function config() {
         return [
             'vars' => [
-                 ['var' => 'text', 'label' => 'Text', 'type' => 'wysiwyg2'],
+                ['var' => 'text', 'label' => 'Text', 'type' => 'wysiwyg2'],
             ],
         ];
     }
-    
+
     /**
-     * {@inheritDoc} 
+     * {@inheritDoc}
      *
      * @param {{vars.text}}
-    */
-    public function admin()
-    {
-        return '<h5 class="mb-3">Word like editor</h5>{{vars.text}}';
+     */
+    public function admin() {
+        return '<h5 class="mb-3">Edytor tekstu</h5>{{vars.text}}';
     }
 }

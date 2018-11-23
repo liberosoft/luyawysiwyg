@@ -10,7 +10,8 @@ class WysiwygAssets extends \luya\web\Asset
 
     public $js = [
         'js/directives.js',
-        'js/pl.js'
+        'js/langs/pl.js',
+        //'js/plugins/powerpaste/'
     ];
 
     public $depends = [
