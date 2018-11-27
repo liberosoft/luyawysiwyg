@@ -53,6 +53,15 @@ zaa.directive("wysiwyg2Label", function () {
                 menubar: false,
                 plugins: 'link image code lists textcolor',
                 toolbar: 'undo redo | bold underline italic forecolor backcolor | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent  | removeformat | code'
+
+                // theme: 'modern',
+                // plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern code',
+                // toolbar: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat | code',
+                // image_advtab: true,
+                // content_css: [
+                //     '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                //     '//www.tinymce.com/css/codepen.min.css'
+                // ]
             };
         }],
     }
