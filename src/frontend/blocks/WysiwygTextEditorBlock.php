@@ -2,6 +2,7 @@
 
 namespace liberosoft\luyawysiwyg\frontend\blocks;
 
+use liberosoft\luyawysiwyg\frontend\Module;
 use luya\cms\base\PhpBlock;
 use luya\cms\frontend\blockgroups\ProjectGroup;
 
@@ -15,7 +16,7 @@ class WysiwygTextEditorBlock extends PhpBlock
     /**
      * @var string The module where this block belongs to in order to find the view files.
      */
-    public $module = 'wysiwygfrontend';
+    public $module = 'luyawysiwyg';
 
     /**
      * @inheritDoc
@@ -28,7 +29,7 @@ class WysiwygTextEditorBlock extends PhpBlock
      * @inheritDoc
      */
     public function name() {
-        return 'Edytor tekstu';
+        return Module::t('module_name');
     }
 
     /**
@@ -44,8 +45,11 @@ class WysiwygTextEditorBlock extends PhpBlock
     public function config() {
         return [
             'vars' => [
-                ['var' => 'text', 'label' => 'Text', 'type' => 'wysiwyg2'],
+                ['var' => 'text', 'label' => Module::t('field_name'), 'type' => 'wysiwyg2'],
             ],
+            'cfgs' => [
+                ['var' => 'cssClass', 'label' => Module::t('css_class'), 'type' => 'zaa-text'],
+            ]
         ];
     }
 
@@ -55,6 +59,6 @@ class WysiwygTextEditorBlock extends PhpBlock
      * @param {{vars.text}}
      */
     public function admin() {
-        return '<h5 class="mb-3">Edytor tekstu</h5>{{vars.text}}';
+        return '<h5 class="mb-3">'.Module::t('module_name').'</h5>{{vars.text}}';
     }
 }
