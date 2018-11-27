@@ -16,7 +16,7 @@ class WysiwygTextEditorBlock extends PhpBlock
     /**
      * @var string The module where this block belongs to in order to find the view files.
      */
-    public $module = 'luyawysiwyg';
+    public $module = 'wysiwygfrontend';
 
     /**
      * @inheritDoc
