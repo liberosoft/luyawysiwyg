@@ -3,6 +3,7 @@
 namespace liberosoft\luyawysiwyg\frontend\blocks;
 
 use liberosoft\luyawysiwyg\frontend\Module;
+use luya\admin\models\Config;
 use luya\cms\base\PhpBlock;
 use luya\cms\frontend\blockgroups\ProjectGroup;
 
@@ -13,6 +14,10 @@ use luya\cms\frontend\blockgroups\ProjectGroup;
  */
 class WysiwygTextEditorBlock extends PhpBlock
 {
+    private $_plugins = 'link image code';
+    private $_toolbar = 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | code';
+    private $_height = '480';
+
     /**
      * @var string The module where this block belongs to in order to find the view files.
      */
@@ -36,7 +41,7 @@ class WysiwygTextEditorBlock extends PhpBlock
      * @inheritDoc
      */
     public function icon() {
-        return 'text_format'; // see the list of icons on: https://design.google.com/icons/
+        return 'text_format';
     }
 
     /**
@@ -45,7 +50,11 @@ class WysiwygTextEditorBlock extends PhpBlock
     public function config() {
         return [
             'vars' => [
-                ['var' => 'text', 'label' => Module::t('field_name'), 'type' => 'wysiwyg2'],
+                [
+                    'var' => 'text',
+                    'label' => Module::t('field_name'),
+                    'type' => 'wysiwyg2'
+                ],
             ],
             'cfgs' => [
                 ['var' => 'cssClass', 'label' => Module::t('css_class'), 'type' => 'zaa-text'],
@@ -59,6 +68,6 @@ class WysiwygTextEditorBlock extends PhpBlock
      * @param {{vars.text}}
      */
     public function admin() {
-        return '<h5 class="mb-3">'.Module::t('module_name').'</h5>{{vars.text}}';
+        return '<h5 class="mb-3">' . Module::t('module_name') . '</h5>{{vars.text}}';
     }
 }

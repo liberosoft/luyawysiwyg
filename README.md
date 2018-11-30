@@ -21,6 +21,11 @@ return [
         'wysiwygadmin' => [
             'class' => 'liberosoft\luyawysiwyg\admin\Module',
             'useAppViewPath' => false,
+            'textEditorOptions' => [ // tinymce options
+                'height' => '480',
+                'plugins' => 'link image code lists textcolor',
+                'toolbar' => 'undo redo | bold underline italic forecolor backcolor | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | code'
+            ]
         ],
         // ...
     ],
